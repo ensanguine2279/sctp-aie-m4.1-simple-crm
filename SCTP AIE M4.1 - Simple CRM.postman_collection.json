@@ -1,0 +1,2039 @@
+{
+  "info": {
+    "_postman_id": "a69db441-269a-4324-b5bf-b545bd2dc166",
+    "name": "SCTP AIE M4.1 - Simple CRM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13967603"
+  },
+  "item": [
+    {
+      "name": "Role Based Access Control",
+      "item": [
+        {
+          "name": "anonymous",
+          "item": [
+            {
+              "name": "Get customers",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}",
+                  "host": [
+                    "{{url}}"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "401 - Unauthorized",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}",
+                      "host": [
+                        "{{url}}"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Set-Cookie",
+                      "value": "JSESSIONID=DD42A0AF79A5A47627D9ED1F13F39CE6; Path=/; HttpOnly"
+                    },
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Basic realm=\"Realm\", charset=\"UTF-8\""
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:35:01 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Create customer",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "401 - Unauthorized",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Basic realm=\"Realm\", charset=\"UTF-8\""
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:14:48 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete customer",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "401 - Unauthorized",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Basic realm=\"Realm\", charset=\"UTF-8\""
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:16:05 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Update customer",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "401 - Unauthorized",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": ""
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Basic realm=\"Realm\", charset=\"UTF-8\""
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:17:42 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            }
+          ],
+          "auth": {
+            "type": "noauth"
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "admin",
+          "item": [
+            {
+              "name": "Get customers",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": [
+                {
+                  "name": "200 - Ok",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:30:16 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Tony\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"CEO\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Bruce\",\n        \"lastName\": \"Banner\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Scientist\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Peter\",\n        \"lastName\": \"Parker\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Photographer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Stephen\",\n        \"lastName\": \"Strange\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Doctor\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Natasha\",\n        \"lastName\": \"Romanoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Spy\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Clint\",\n        \"lastName\": \"Barton\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Archer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Wanda\",\n        \"lastName\": \"Maximoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Sorceress\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Steve\",\n        \"lastName\": \"Rogers\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Soldier\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Thor\",\n        \"lastName\": \"Odinson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Thunder\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Loki\",\n        \"lastName\": \"Laufeyson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Mischief\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Morgan\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Daughter of Ironman\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "Create customer",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "200 - Ok",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:10:38 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 12,\n    \"firstName\": \"Tony\",\n    \"lastName\": \"Stark\",\n    \"email\": \"tony@avengers.com\",\n    \"contactNo\": \"77222299\",\n    \"jobTitle\": \"Tech Genius\",\n    \"yearOfBirth\": 1978,\n    \"interactions\": null\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update customer",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "200 - Ok",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"firstName\": \"Tony\",\r\n    \"lastName\": \"Stark\",\r\n    \"email\": \"tony@avengers.com\",\r\n    \"contactNo\": \"77222299\",\r\n    \"jobTitle\": \"Tech Genius\",\r\n    \"yearOfBirth\": \"1978\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:11:51 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 2,\n    \"firstName\": \"Tony\",\n    \"lastName\": \"Stark\",\n    \"email\": \"tony@avengers.com\",\n    \"contactNo\": \"77222299\",\n    \"jobTitle\": \"Tech Genius\",\n    \"yearOfBirth\": 1978,\n    \"interactions\": []\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete customer",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "204 - No Content",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:32:22 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": null
+                }
+              ]
+            }
+          ],
+          "auth": {
+            "type": "basic",
+            "basic": [
+              {
+                "key": "password",
+                "value": "admin123",
+                "type": "string"
+              },
+              {
+                "key": "username",
+                "value": "admin",
+                "type": "string"
+              }
+            ]
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "manager",
+          "item": [
+            {
+              "name": "Get customers",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "200 - Ok",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:46:54 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Tony\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"CEO\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Bruce\",\n        \"lastName\": \"Banner\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Scientist\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Peter\",\n        \"lastName\": \"Parker\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Photographer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Stephen\",\n        \"lastName\": \"Strange\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Doctor\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Natasha\",\n        \"lastName\": \"Romanoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Spy\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Clint\",\n        \"lastName\": \"Barton\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Archer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Wanda\",\n        \"lastName\": \"Maximoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Sorceress\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Steve\",\n        \"lastName\": \"Rogers\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Soldier\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Thor\",\n        \"lastName\": \"Odinson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Thunder\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Loki\",\n        \"lastName\": \"Laufeyson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Mischief\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Morgan\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Daughter of Ironman\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "Create customer",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "403 - Forbidden",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:50:05 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-09-23T12:50:05.710Z\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/customers\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update customer",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Black\",\r\n    \"lastName\": \"Widow\",\r\n    \"email\": \"blkwidow@avengers.com\",\r\n    \"contactNo\": \"72729977\",\r\n    \"jobTitle\": \"HR Manager\",\r\n    \"yearOfBirth\": 1997\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "200 - Ok",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Black\",\r\n    \"lastName\": \"Widow\",\r\n    \"email\": \"blkwidow@avengers.com\",\r\n    \"contactNo\": \"72729977\",\r\n    \"jobTitle\": \"HR Manager\",\r\n    \"yearOfBirth\": 1997\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:53:30 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 2,\n    \"firstName\": \"Black\",\n    \"lastName\": \"Widow\",\n    \"email\": \"blkwidow@avengers.com\",\n    \"contactNo\": \"72729977\",\n    \"jobTitle\": \"HR Manager\",\n    \"yearOfBirth\": 1997,\n    \"interactions\": []\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete customer",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "403 - Forbidden",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:54:34 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-09-23T12:54:34.243Z\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/customers/2\"\n}"
+                }
+              ]
+            }
+          ],
+          "auth": {
+            "type": "basic",
+            "basic": [
+              {
+                "key": "password",
+                "value": "manager123",
+                "type": "string"
+              },
+              {
+                "key": "username",
+                "value": "manager",
+                "type": "string"
+              }
+            ]
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "user",
+          "item": [
+            {
+              "name": "Get customers",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Ok - 200",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:58:01 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Tony\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"CEO\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Peter\",\n        \"lastName\": \"Parker\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Photographer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Stephen\",\n        \"lastName\": \"Strange\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Doctor\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Natasha\",\n        \"lastName\": \"Romanoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Spy\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Clint\",\n        \"lastName\": \"Barton\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Archer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Wanda\",\n        \"lastName\": \"Maximoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Sorceress\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Steve\",\n        \"lastName\": \"Rogers\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Soldier\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Thor\",\n        \"lastName\": \"Odinson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Thunder\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Loki\",\n        \"lastName\": \"Laufeyson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Mischief\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Morgan\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Daughter of Ironman\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Black\",\n        \"lastName\": \"Widow\",\n        \"email\": \"blkwidow@avengers.com\",\n        \"contactNo\": \"72729977\",\n        \"jobTitle\": \"HR Manager\",\n        \"yearOfBirth\": 1997,\n        \"interactions\": []\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "Delete customer",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/customers/:id",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "403 - Forbidden",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/customers/:id",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 12:24:01 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-09-23T12:24:01.883Z\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/customers/2\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Create customer",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "403 - Forbidden",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:03:08 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-09-23T13:03:08.800Z\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/customers\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Update customer",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/customers",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "403 - Forbidden",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/customers",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "customers"
+                      ]
+                    }
+                  },
+                  "status": "Forbidden",
+                  "code": 403,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-cache, no-store, max-age=0, must-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 23 Sep 2026 13:04:33 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"timestamp\": \"2026-09-23T13:04:33.937Z\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/customers\"\n}"
+                }
+              ]
+            }
+          ],
+          "auth": {
+            "type": "basic",
+            "basic": [
+              {
+                "key": "password",
+                "value": "password",
+                "type": "string"
+              },
+              {
+                "key": "username",
+                "value": "user",
+                "type": "string"
+              }
+            ]
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {},
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Get customers - Basic Auth",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "f0b625d4-d5c3-43df-9a9b-63fdf27e606b",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "user",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/customers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "customers"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - Ok",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Expires",
+              "value": "0"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 23 Sep 2026 11:31:08 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Tony\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"CEO\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Bruce\",\n        \"lastName\": \"Banner\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Scientist\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Peter\",\n        \"lastName\": \"Parker\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Photographer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Stephen\",\n        \"lastName\": \"Strange\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Doctor\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Natasha\",\n        \"lastName\": \"Romanoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Spy\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Clint\",\n        \"lastName\": \"Barton\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Archer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Wanda\",\n        \"lastName\": \"Maximoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Sorceress\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Steve\",\n        \"lastName\": \"Rogers\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Soldier\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Thor\",\n        \"lastName\": \"Odinson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Thunder\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Loki\",\n        \"lastName\": \"Laufeyson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Mischief\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Morgan\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Daughter of Ironman\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    }\n]"
+        },
+        {
+          "name": "401 - Unauthorized",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Set-Cookie",
+              "value": "JSESSIONID=6AFAAC423053651DFEC0E09FFEAB0584; Path=/; HttpOnly"
+            },
+            {
+              "key": "WWW-Authenticate",
+              "value": "Basic realm=\"Realm\", charset=\"UTF-8\""
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Expires",
+              "value": "0"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "0"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 23 Sep 2026 11:27:03 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "Get customers - properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/customers",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "200 - Ok",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/customers",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "0"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Expires",
+              "value": "0"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 23 Sep 2026 11:34:46 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Tony\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"CEO\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Bruce\",\n        \"lastName\": \"Banner\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Scientist\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Peter\",\n        \"lastName\": \"Parker\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Photographer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 4,\n        \"firstName\": \"Stephen\",\n        \"lastName\": \"Strange\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Doctor\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Natasha\",\n        \"lastName\": \"Romanoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Spy\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 6,\n        \"firstName\": \"Clint\",\n        \"lastName\": \"Barton\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Archer\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 7,\n        \"firstName\": \"Wanda\",\n        \"lastName\": \"Maximoff\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Sorceress\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 8,\n        \"firstName\": \"Steve\",\n        \"lastName\": \"Rogers\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Soldier\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 9,\n        \"firstName\": \"Thor\",\n        \"lastName\": \"Odinson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Thunder\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 10,\n        \"firstName\": \"Loki\",\n        \"lastName\": \"Laufeyson\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"God of Mischief\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    },\n    {\n        \"id\": 11,\n        \"firstName\": \"Morgan\",\n        \"lastName\": \"Stark\",\n        \"email\": null,\n        \"contactNo\": null,\n        \"jobTitle\": \"Daughter of Ironman\",\n        \"yearOfBirth\": 0,\n        \"interactions\": []\n    }\n]"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": ""
+    }
+  ]
+}
