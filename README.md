@@ -1,0 +1,1 @@
+Completed Simple CRM application in [Lesson 4.1 Spring Security Fundamentals (Basic Authentication & Role-Based Authorization)](https://github.com/su-ntu-sctp/ai-3.19-software-testing/tree/main)
